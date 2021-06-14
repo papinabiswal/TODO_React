@@ -1,13 +1,17 @@
 import React from 'react';
 import Navbar from  "./Navbar.js"
-import Body from "./Body.js"
 import "./Main.css"
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 const Main = () => {
     return (
         <div className="main">
-        <Navbar/> 
-        <Body/>
+            <Router>
+               <Navbar/> 
+                  <Switch>
+                      <Route path='/' />
+                  </Switch>
+            </Router>
         </div>
     );
 };
